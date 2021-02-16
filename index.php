@@ -1,6 +1,9 @@
 <?php
-include 'Order.php';
+include 'Strategy.php';
 
-$order = new ORder (new FiveRate());
-$order->setRate();
-echo $order->rate;
+$order = new DisplayTotal (new FirstOrder(20));
+$order->Display();
+
+$order = new DisplayTotal (new FirstOrder(5));
+$order->Display();
+

@@ -2,24 +2,16 @@
 Interface Strategy
 {
     public function GetTotalAmount();
-    public function SetAmount();
-
 }
 
 class FirstOrder implements Strategy
 {
-    public $amount;
+    public $amount = 100;
     public $rate;
     public $total;
 
-
     public function __construct($rate){
         $this->rate=$rate;
-    }
-
-    public function SetAmount()
-    {
-      $this->amount = 100;
     }
 
     public function GetTotalAmount()
@@ -28,50 +20,39 @@ class FirstOrder implements Strategy
 
     }
 
-    }
+}
 
 
 class SecondOrder implements Strategy
 {
 
-    public $amount;
+    public $amount = 500;
     public $rate;
     public $total;
 
-    public function __construct($rate){
+    public function __construct($rate)
+    {
         $this->rate=$rate;
-    }
-
-    public function SetAmount(){
-        return $this->amount = 500;
     }
 
     public function GetTotalAmount()
     {
         return $this->total=$this->amount + $this->amount * $this->rate / 100;
-
     }
 
 }
 
 
-Class DisplayTotal{
+Class DisplayTotal
+{
+    public $instance;
 
-    public $amount;
-    public $rate;
-    public $total;
-
-    public function __construct(Strategy $total){
-        $this->total=$total;
+    public function __construct(Strategy $instance){
+        $this->instance=$instance;
     }
 
-    public function GetTotalAmount()
+    public function Display()
     {
-        return $this->total=$this->amount + $this->amount * $this->rate / 100;
-
-    }
-
-    public function Display(){
-        echo "Заказ на сумму: $this->amount, налог: $this->rate, итого: $this->total";
+        echo "Заказ на сумму: " . $this->instance->amount . '$; ' . "налог: " . $this->instance->rate .'%; ' . "итого: " . $this->instance->GetTotalAmount() . "<br>";
     }
 }

@@ -25,5 +25,4 @@ Class Order{
         $this->rate=$rate;
     }
 
-    #public function setRate();
 }
