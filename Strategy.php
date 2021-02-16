@@ -27,10 +27,6 @@ class FirstOrder implements Strategy
         return $this->total=$this->amount + $this->amount * $this->rate / 100;
 
     }
-    public function Display()
-    {
-        echo "Заказ на сумму: $this->amount, налог: $this->rate, итого: $this->total";
-    }
 
     }
 
@@ -38,8 +34,8 @@ class FirstOrder implements Strategy
 class SecondOrder implements Strategy
 {
 
-    public int $amount;
-    public int $rate;
+    public $amount;
+    public $rate;
     public $total;
 
     public function __construct($rate){
@@ -56,10 +52,6 @@ class SecondOrder implements Strategy
 
     }
 
-    public function Display()
-    {
-        echo "Заказ на сумму: $this->amount, налог: $this->rate, итого: $this->total";
-    }
 }
 
 
@@ -71,10 +63,6 @@ Class DisplayTotal{
 
     public function __construct(Strategy $total){
         $this->total=$total;
-    }
-
-    public function SetAmount(){
-        return $this->amount->SetAmount();
     }
 
     public function GetTotalAmount()

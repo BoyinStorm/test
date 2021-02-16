@@ -1,58 +1,29 @@
 <?php
-Interface OrderCalc
-{
+Interface SetRate{
     public function setRate();
 }
 
-Class FirstRate implements OrderCalc{
+Class FiveRate implements SetRate{
 
-    public $rate = 0;
-    public $comprate;
-
-    public function setRate(){
-        return $this->comprate=$this->rate /100;
-    }
-
-
-}
-
-Class SecondRate implements OrderCalc{
-    public $rate = 5;
-    public $comprate;
+    public $rate;
 
     public function setRate(){
-        return $this->comprate=$this->rate / 100;
+        return $this->rate = 5;
     }
 
-
-}
-
-Class ThirdRate implements OrderCalc{
-    public $rate = 20;
-    public $comprate;
-
-    public function setRate(){
-        return $this->comprate=$this->rate / 100;
+    public function __toString(){
+        return $this->rate;
     }
-
 
 }
 
 Class Order{
-    public $amount;
-    public $total;
-    public $comprate;
 
-    public function __construct($amount){
-        $this->amount=$amount;
-}
+    public $rate;
 
-    public function defineRate(OrderCalc $comprate){
-        $this->
+    public function __construct(SetRate $rate){
+        $this->rate=$rate;
     }
 
-    public function GetTotalAmount(){
-        return $this->total=$this->amount + $this->comprate;
+    #public function setRate();
 }
-}
-
