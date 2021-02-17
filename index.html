@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Магазин</title>
+        <style>
+            form {
+                display: block;
+                margin-top: 0em;
+            }
+            label {
+                display: block;
+                padding-left: 15px;
+                text-indent: -15px;
+            }
+        </style>
+</head>
+<body>
+
+    <form action="YourOrder.php" method="post">
+        <div>
+            <label for="amount">Сумма заказа:</label>
+            <input type="number" id="amount" name="amount"><br><br>
+        </div>
+        <div>
+            <label for="rate1">Днепр</label>
+            <input type="checkbox" id="rate1" name="rate1"><br>
+        </div>
+            <label for="rate2">Харьков</label>
+            <input type="checkbox" id="rate2" name="rate2"><br>
+        <div>
+            <label for="rate3">Львов</label>
+            <input type="checkbox" id="rate3" name="rate3"><br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+
