@@ -22,4 +22,4 @@ if (isset($_GET['rate3'])) {
 }
 ?>
 
-<input type="button" onclick="history.back(-2); return false;" value="Назад">
+<input type="button" onclick="history.back(); return false;" value="Назад">
