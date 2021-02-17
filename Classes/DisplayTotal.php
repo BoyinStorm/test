@@ -11,7 +11,9 @@ Class DisplayTotal implements SplSubject
 
     public function display()
     {
-        echo "Заказ на сумму: {$this->instance->amount}$; налог:  {$this->instance->rate}%; итого: {$this->instance->GetTotalAmount()}$<br>";
+        echo "Заказ на сумму: {$this->instance->amount}$;". PHP_EOL;
+        echo "налог:  {$this->instance->rate}%;" . PHP_EOL;
+        echo "итого: {$this->instance->GetTotalAmount()}$<br>";
         $this->notify();
     }
 
