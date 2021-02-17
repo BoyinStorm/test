@@ -14,5 +14,4 @@ class ThirdRate implements Strategy
     {
         return $this->amount + $this->amount * $this->rate / 100;
     }
-
 }

@@ -5,7 +5,7 @@ Class DisplayTotal
     public $instance;
 
     public function __construct(Strategy $instance){
-        $this->instance=$instance;
+        $this->instance = $instance;
     }
 
     public function display()

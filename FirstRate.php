@@ -7,7 +7,7 @@ class FirstRate implements Strategy
 
     public function __construct($amount)
     {
-        $this->amount=$amount;
+        $this->amount = $amount;
     }
 
     public function getTotalAmount()
