@@ -4,7 +4,6 @@ class SecondRate implements Strategy
 {
     public $amount;
     public $rate = 5;
-    public $total;
 
     public function __construct($amount)
     {
@@ -13,7 +12,7 @@ class SecondRate implements Strategy
 
     public function getTotalAmount()
     {
-        return $this->total = $this->amount + $this->amount * $this->rate / 100;
+        return $this->amount + $this->amount * $this->rate / 100;
     }
 
 }
