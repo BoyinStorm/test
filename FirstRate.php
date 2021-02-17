@@ -1,4 +1,5 @@
 <?php
+
 class FirstRate implements Strategy
 {
     public $amount;
@@ -10,10 +11,8 @@ class FirstRate implements Strategy
         $this->amount=$amount;
     }
 
-    public function GetTotalAmount()
+    public function getTotalAmount()
     {
         return $this->total = $this->amount + $this->amount * $this->rate / 100;
-
     }
-
 }

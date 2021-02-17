@@ -1,4 +1,5 @@
 <?php
+
 Class DisplayTotal
 {
     public $instance;
@@ -7,8 +8,8 @@ Class DisplayTotal
         $this->instance=$instance;
     }
 
-    public function Display()
+    public function display()
     {
-        echo "Заказ на сумму: " . $this->instance->amount . '$; ' . "налог: " . $this->instance->rate .'%; ' . "итого: " . $this->instance->GetTotalAmount() . "<br>";
+        echo "Заказ на сумму: {$this->instance->amount}$; налог:  {$this->instance->rate}%; итого: {$this->instance->GetTotalAmount()}<br>";
     }
 }

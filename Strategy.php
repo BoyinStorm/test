@@ -1,5 +1,5 @@
 <?php
 interface Strategy
 {
-    public function GetTotalAmount();
+    public function getTotalAmount();
 }

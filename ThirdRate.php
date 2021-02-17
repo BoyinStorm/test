@@ -1,7 +1,7 @@
 <?php
+
 class ThirdRate implements Strategy
 {
-
     public $amount;
     public $rate = 20;
     public $total;
@@ -11,7 +11,7 @@ class ThirdRate implements Strategy
         $this->amount = $amount;
     }
 
-    public function GetTotalAmount()
+    public function getTotalAmount()
     {
         return $this->total = $this->amount + $this->amount * $this->rate / 100;
     }
