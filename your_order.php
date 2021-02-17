@@ -1,10 +1,10 @@
 <?php
 
-include 'Strategy.php';
-include 'FirstRate.php';
-include 'SecondRate.php';
-include 'ThirdRate.php';
-include 'DisplayTotal.php';
+include 'Classes/Strategy.php';
+include 'Classes/FirstRate.php';
+include 'Classes/SecondRate.php';
+include 'Classes/ThirdRate.php';
+include 'Classes/DisplayTotal.php';
 include 'Logger.php';
 
 if (isset($_GET['rate1'])) {

@@ -11,7 +11,7 @@ class Logger implements SplObserver
 
     public function update(SplSubject $subject)
     {
-        $entry = date("Y-m-d H:i:s") . ": товар на сумму {$subject->instance->getTotalAmount()}" . "'\n";
+        $entry = date("Y-m-d H:i:s") . ": товар на сумму {$subject->instance->getTotalAmount()}\n";
         file_put_contents($this->filename, $entry, FILE_APPEND);
     }
 }
